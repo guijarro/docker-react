@@ -6,3 +6,6 @@ services:
 
 before_install:
  - docker build -t mguijarro/docker-react -f Dockerfile.dev .
+
+script:
+ - docker run mguijarro/docker-react npm run test -- --coverage
